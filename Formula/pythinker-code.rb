@@ -1,8 +1,8 @@
 class PythinkerCode < Formula
   desc "Terminal-native AI engineering agent by Pythoughts Labs"
   homepage "https://code.pythinker.com"
-  url "https://registry.npmjs.org/@pythoughts/pythinker-code/-/pythinker-code-0.1.0.tgz"
-  sha256 "54e0a5e2bb758e171e45ff6eeba3d77812838ef1286cbd4b36e9d5bc2b44dabf"
+  url "https://registry.npmjs.org/@pythoughts/pythinker-code/-/pythinker-code-0.2.0.tgz"
+  sha256 "6166ec979691c1f061ff63f6d8e077d5b37566e5b70ef8fdb1f99b8d2313d267"
   license "MIT"
 
   depends_on "node"
