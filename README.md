@@ -1,11 +1,11 @@
-# Pythoughts Labs Homebrew Tap
+# PyModel Homebrew Tap
 
-Official Homebrew formulae for Pythoughts Labs tools.
+Official Homebrew formulae for PyModel tools.
 
 ## Install
 
 ```sh
-brew install pythoughts-labs/tap/pythinker-code
+brew install pymodel/tap/pythinker-code
 ```
 
-Formula versions track npm releases of [`@pythoughts/pythinker-code`](https://www.npmjs.com/package/@pythoughts/pythinker-code).
+Formula versions track npm releases of [`@pymodel/pythinker-code`](https://www.npmjs.com/package/@pymodel/pythinker-code).

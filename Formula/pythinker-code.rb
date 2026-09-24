@@ -1,5 +1,5 @@
 class PythinkerCode < Formula
-  desc "Terminal-native AI engineering agent by Pythoughts Labs"
+  desc "Terminal-native AI engineering agent by PyModel"
   homepage "https://code.pythinker.com"
   url "https://registry.npmjs.org/@pymodel/pythinker-code/-/pythinker-code-2.1.0.tgz"
   sha256 "3dd47cd54366be4468ac5e71cd7b78f02190ce8e1a9ac4c5fc7bb51605a4eb48"
