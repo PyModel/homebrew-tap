@@ -1,31 +1,34 @@
 class PythinkerCode < Formula
   desc "Terminal-native AI engineering agent by PyModel"
   homepage "https://code.pythinker.com"
-  url "https://registry.npmjs.org/@pymodel/pythinker-code/-/pythinker-code-2.4.1.tgz"
-  sha256 "e9d8d8d3f1ddd6ce8bf84e00bd50dbe9b25ec0320b82bb506522a18d80b89c1d"
+  version "2.5.0"
   license "MIT"
 
-  depends_on "node"
-
-  # The bundled @opentui prebuilt dylib has no Mach-O headerpad space, so
-  # brew's install-linkage fixup prints a non-fatal "Failed changing dylib ID"
-  # warning. The library is loaded by absolute path at runtime; the install
-  # works. Upstream fix requires OpenTUI to link with -headerpad_max_install_names.
-  def install
-    system "npm", "install", *std_npm_args
-    bin.install_symlink Dir["#{libexec}/bin/*"]
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/PyModel/pythinker-code/releases/download/%40pymodel%2Fpythinker-code%402.5.0/pythinker-code-darwin-arm64.tar.gz"
+      sha256 "6f90980623ffb8d4020acd65953e6294aa87b82a7773fc33dc40b0a435533301"
+    else
+      url "https://github.com/PyModel/pythinker-code/releases/download/%40pymodel%2Fpythinker-code%402.5.0/pythinker-code-darwin-x64.tar.gz"
+      sha256 "27ff5b6156a93d38f34cd7d3313c77e7370c5c880a8e75822458c864973ede15"
+    end
   end
 
-  def caveats
-    <<~EOS
-      During install, Homebrew may print a non-fatal warning:
-        "Failed changing dylib ID of .../libopentui.dylib"
-      This is expected (a prebuilt library without Mach-O headerpad space)
-      and does not affect functionality.
-    EOS
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/PyModel/pythinker-code/releases/download/%40pymodel%2Fpythinker-code%402.5.0/pythinker-code-linux-arm64.tar.gz"
+      sha256 "c8e4da4c7cdd737cc32083fb075f359ec18b048576b0cc9ae7bd51fee414b1e2"
+    else
+      url "https://github.com/PyModel/pythinker-code/releases/download/%40pymodel%2Fpythinker-code%402.5.0/pythinker-code-linux-x64.tar.gz"
+      sha256 "1531caaa5e43520b86e5560abef11af16a3c189600f8247d8d6f2ab52c2b2c07"
+    end
+  end
+
+  def install
+    bin.install "pythinker"
   end
 
   test do
-    assert_match "pythinker", shell_output("#{bin}/pythinker --help")
+    assert_equal version.to_s, shell_output("#{bin}/pythinker --version").strip
   end
 end
