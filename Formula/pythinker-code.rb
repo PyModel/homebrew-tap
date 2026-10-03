@@ -1,26 +1,26 @@
 class PythinkerCode < Formula
   desc "Terminal-native AI engineering agent by PyModel"
   homepage "https://code.pythinker.com"
-  version "2.5.1"
+  version "2.5.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/PyModel/pythinker-code/releases/download/%40pymodel%2Fpythinker-code%402.5.1/pythinker-code-darwin-arm64.tar.gz"
-      sha256 "1aa041ba04545e1bb9fc507d0e360f6866e6aee4f94ffdf5517b0a73179c56ae"
+      url "https://github.com/PyModel/pythinker-code/releases/download/%40pymodel%2Fpythinker-code%402.5.2/pythinker-code-darwin-arm64.tar.gz"
+      sha256 "006b465cad037c5727333e40dcae6d2a3fd865cc65e2115e929adc80c406c33b"
     else
-      url "https://github.com/PyModel/pythinker-code/releases/download/%40pymodel%2Fpythinker-code%402.5.1/pythinker-code-darwin-x64.tar.gz"
-      sha256 "bf8757ed23754a3f232cf314872cfd85a91ea5771b3d936ea7394d2c8b0cff85"
+      url "https://github.com/PyModel/pythinker-code/releases/download/%40pymodel%2Fpythinker-code%402.5.2/pythinker-code-darwin-x64.tar.gz"
+      sha256 "4bee171b49894e9be64c80087401e5da0ed34edfe6e73a14e309b264478675b9"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/PyModel/pythinker-code/releases/download/%40pymodel%2Fpythinker-code%402.5.1/pythinker-code-linux-arm64.tar.gz"
-      sha256 "1989b65088a1d0fd41892fc6e1246d50ef691dfb46b7e7e1e0a7d182b0132b9a"
+      url "https://github.com/PyModel/pythinker-code/releases/download/%40pymodel%2Fpythinker-code%402.5.2/pythinker-code-linux-arm64.tar.gz"
+      sha256 "00ccba8c48adc5086dce2412d295b8d06fb3abc4eb21f191d89c3b09cf019685"
     else
-      url "https://github.com/PyModel/pythinker-code/releases/download/%40pymodel%2Fpythinker-code%402.5.1/pythinker-code-linux-x64.tar.gz"
-      sha256 "1b1a8731c21a6599063ea0469375df86d436e2eaaf288b803030f336b57ffe18"
+      url "https://github.com/PyModel/pythinker-code/releases/download/%40pymodel%2Fpythinker-code%402.5.2/pythinker-code-linux-x64.tar.gz"
+      sha256 "e0044e23e1f926ee7d81155f319a103eec00ad8f10d830830869899dc08d5761"
     end
   end
 
